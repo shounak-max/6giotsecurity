@@ -1,0 +1,106 @@
+{
+  "seeds": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "f0_parity": {
+    "fedavg_recall_mean": 0.22977090254373533,
+    "fedavg_recall_std": 0.07435499913939021,
+    "multikrum_f0_mean": 0.2287905103868726,
+    "multikrum_f0_std": 0.07527433650384384,
+    "paired_diff_mean": -0.0009803921568627444
+  },
+  "k_sweep": {
+    "1": {
+      "fedavg_recall_mean": 0.22977090254373533,
+      "fedavg_recall_std": 0.07435499913939021,
+      "multikrum_recall_mean": 0.2271537280515609,
+      "multikrum_recall_std": 0.07306580157205365,
+      "paired_diff_mean": -0.002617174492174484,
+      "paired_diff_ci": [
+        -0.012776529423134413,
+        0.007542180438785446
+      ],
+      "holder_acc_mean": 0.0,
+      "binom_pvalue": 1.267650600228196e-70
+    },
+    "2": {
+      "fedavg_recall_mean": 0.24525814169777022,
+      "fedavg_recall_std": 0.08450464572507586,
+      "multikrum_recall_mean": 0.2362763456300608,
+      "multikrum_recall_std": 0.07600934838815439,
+      "paired_diff_mean": -0.008981796067709366,
+      "paired_diff_ci": [
+        -0.03007301808135013,
+        0.0121094259459314
+      ],
+      "holder_acc_mean": 0.005,
+      "binom_pvalue": 1.2871573734513838e-137
+    },
+    "3": {
+      "fedavg_recall_mean": 0.39582136638444687,
+      "fedavg_recall_std": 0.1113065401975622,
+      "multikrum_recall_mean": 0.2583820769443835,
+      "multikrum_recall_std": 0.08966911172383638,
+      "paired_diff_mean": -0.13743928944006342,
+      "paired_diff_ci": [
+        -0.18662769425830375,
+        -0.0882508846218231
+      ],
+      "holder_acc_mean": 0.5233333333333333,
+      "binom_pvalue": 6.3154218515245185e-27
+    },
+    "5": {
+      "fedavg_recall_mean": 0.4984289507219075,
+      "fedavg_recall_std": 0.08597272850951966,
+      "multikrum_recall_mean": 0.4997616085038687,
+      "multikrum_recall_std": 0.09379676388220783,
+      "paired_diff_mean": 0.0013326577819611884,
+      "paired_diff_ci": [
+        -0.015899648800014217,
+        0.018564964363936592
+      ],
+      "holder_acc_mean": 0.8180000000000002,
+      "binom_pvalue": 0.85629724863726
+    }
+  },
+  "secondary_aggregators": {
+    "trimmed_mean_recall_mean": 0.2329107960609509,
+    "trimmed_mean_recall_std": 0.07306761461774391,
+    "median_recall_mean": 0.23578252808709466,
+    "median_recall_std": 0.07320569803497334
+  },
+  "causal_mediation_arms": {
+    "fedavg_full_mean": 0.22977090254373533,
+    "fedavg_full_std": 0.07435499913939021,
+    "placebo_drop_mean": 0.23477560716144308,
+    "placebo_drop_std": 0.06600985692851924,
+    "tost_pvalue": 1.0081423956018481e-07,
+    "tost_ci": [
+      -0.006157590400386412,
+      0.016166999635801836
+    ],
+    "multikrum_natural_mean": 0.2271537280515609,
+    "multikrum_forced_mean": 0.2296638585299576,
+    "multikrum_forced_std": 0.06999484165793515,
+    "mediation_ratio": 0.9590993974235192
+  }
+}

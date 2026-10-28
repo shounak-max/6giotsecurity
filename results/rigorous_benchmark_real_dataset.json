@@ -1,0 +1,2081 @@
+{
+  "oracle_clean_none": {
+    "macro_f1_mean": 0.4156988059954849,
+    "macro_f1_std": 0.048528100696635657,
+    "macro_f1_ci95": 0.06024593567342621,
+    "bal_acc_mean": 0.45772092958395894,
+    "bal_acc_std": 0.046691696707296525,
+    "rare_recall_mean": 0.3502156463609542,
+    "rare_recall_std": 0.21762704525406593,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.7323474884033203,
+        "macro_f1": 0.33575450776300564,
+        "balanced_accuracy": 0.3818411062294974,
+        "accuracy": 0.6237113402061856,
+        "fpr": 0.2235294117647059,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 8,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8101401329040527,
+        "macro_f1": 0.4277357128003094,
+        "balanced_accuracy": 0.45337767838944565,
+        "accuracy": 0.6958762886597938,
+        "fpr": 0.08394160583941605,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.4869374059932894,
+        "num_accepted": 8,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.7910447761194029,
+        "recall_class_7": 0.6697674418604651,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.826735258102417,
+        "macro_f1": 0.4668943341976836,
+        "balanced_accuracy": 0.5075248900687022,
+        "accuracy": 0.6113402061855671,
+        "fpr": 0.5539568345323741,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.5627955758962624,
+        "num_accepted": 8,
+        "num_rejected": 0,
+        "recall_class_1": 0.1826086956521739,
+        "recall_class_5": 0.9429824561403509,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7228734493255615,
+        "macro_f1": 0.4319065841886144,
+        "balanced_accuracy": 0.47354327213708114,
+        "accuracy": 0.668041237113402,
+        "fpr": 0.0683453237410072,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.31251741108738046,
+        "num_accepted": 8,
+        "num_rejected": 0,
+        "recall_class_1": 0.03305785123966942,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.9044943820224719,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8353774547576904,
+        "macro_f1": 0.4162028910278117,
+        "balanced_accuracy": 0.4723177010950681,
+        "accuracy": 0.6185567010309279,
+        "fpr": 0.14173228346456693,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.38882783882783883,
+        "num_accepted": 8,
+        "num_rejected": 0,
+        "recall_class_1": 0.6857142857142857,
+        "recall_class_5": 0.25,
+        "recall_class_7": 0.23076923076923078,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "fedavg_none": {
+    "macro_f1_mean": 0.4534112499957432,
+    "macro_f1_std": 0.06036906754324799,
+    "macro_f1_ci95": 0.07494608088231618,
+    "bal_acc_mean": 0.4824104470400856,
+    "bal_acc_std": 0.06599605016767902,
+    "rare_recall_mean": 0.3514217809933097,
+    "rare_recall_std": 0.21347710463143624,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.5823667049407959,
+        "macro_f1": 0.36658569463869195,
+        "balanced_accuracy": 0.3861826956485118,
+        "accuracy": 0.6103092783505155,
+        "fpr": 0.42745098039215684,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6374044418334961,
+        "macro_f1": 0.439128877690216,
+        "balanced_accuracy": 0.4608173074717128,
+        "accuracy": 0.7237113402061855,
+        "fpr": 0.10583941605839416,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.5511512206409811,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.8208955223880597,
+        "recall_class_7": 0.8325581395348837,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7547402381896973,
+        "macro_f1": 0.517237098423122,
+        "balanced_accuracy": 0.5613815719425866,
+        "accuracy": 0.6701030927835051,
+        "fpr": 0.05755395683453238,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3394927536231884,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.09565217391304348,
+        "recall_class_5": 0.5833333333333334,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.5919036865234375,
+        "macro_f1": 0.5041950835095361,
+        "balanced_accuracy": 0.5206073838578311,
+        "accuracy": 0.7206185567010309,
+        "fpr": 0.09352517985611511,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3814034110254743,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.38016528925619836,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.7640449438202247,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7787318229675293,
+        "macro_f1": 0.4399094957171499,
+        "balanced_accuracy": 0.48306327627978585,
+        "accuracy": 0.6659793814432989,
+        "fpr": 0.06299212598425197,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.4850615196769043,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.3,
+        "recall_class_5": 0.2261904761904762,
+        "recall_class_7": 0.9289940828402367,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "fedavg_backdoor": {
+    "macro_f1_mean": 0.38443504329841194,
+    "macro_f1_std": 0.05677754365782935,
+    "macro_f1_ci95": 0.07048732989341738,
+    "bal_acc_mean": 0.4135979614629376,
+    "bal_acc_std": 0.06451625698219435,
+    "rare_recall_mean": 0.3132201677210783,
+    "rare_recall_std": 0.22914785906602292,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.9952447552447552,
+    "asr_std": 0.01063305052237663,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.6939718723297119,
+        "macro_f1": 0.37882757700349345,
+        "balanced_accuracy": 0.3847399901431845,
+        "accuracy": 0.6319587628865979,
+        "fpr": 0.3411764705882353,
+        "backdoor_asr": 0.9762237762237762,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.752511739730835,
+        "macro_f1": 0.35599467250321304,
+        "balanced_accuracy": 0.40496222501308476,
+        "accuracy": 0.6814432989690722,
+        "fpr": 0.09854014598540146,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.5503181765590651,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.9253731343283582,
+        "recall_class_7": 0.7255813953488373,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6798169612884521,
+        "macro_f1": 0.45939163809935596,
+        "balanced_accuracy": 0.5141347905731447,
+        "accuracy": 0.5989690721649484,
+        "fpr": 0.0539568345323741,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.16859267734553776,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.06086956521739131,
+        "recall_class_5": 0.27631578947368424,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6710777282714844,
+        "macro_f1": 0.3110693936532351,
+        "balanced_accuracy": 0.3393730073353877,
+        "accuracy": 0.5670103092783505,
+        "fpr": 0.050359712230215826,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.35137895812053116,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.8181818181818182,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.23595505617977527,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7352259159088135,
+        "macro_f1": 0.416891935232762,
+        "balanced_accuracy": 0.4247797942498863,
+        "accuracy": 0.6474226804123712,
+        "fpr": 0.051181102362204724,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.49581102658025733,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.35,
+        "recall_class_5": 0.2261904761904762,
+        "recall_class_7": 0.9112426035502958,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "multikrum_none": {
+    "macro_f1_mean": 0.43581957642915936,
+    "macro_f1_std": 0.07627857827099951,
+    "macro_f1_ci95": 0.09469718068099946,
+    "bal_acc_mean": 0.4749915743243104,
+    "bal_acc_std": 0.07460186468103243,
+    "rare_recall_mean": 0.37162207219750554,
+    "rare_recall_std": 0.23292455449667476,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.636754035949707,
+        "macro_f1": 0.31193875733440124,
+        "balanced_accuracy": 0.3585030998706982,
+        "accuracy": 0.5587628865979382,
+        "fpr": 0.6745098039215687,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.5935029983520508,
+        "macro_f1": 0.4309282580563793,
+        "balanced_accuracy": 0.45836137425233914,
+        "accuracy": 0.7072164948453609,
+        "fpr": 0.10583941605839416,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.5011454356126345,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.7313432835820896,
+        "recall_class_7": 0.772093023255814,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6905162334442139,
+        "macro_f1": 0.4954047909712558,
+        "balanced_accuracy": 0.5524250703046325,
+        "accuracy": 0.6608247422680412,
+        "fpr": 0.06474820143884892,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.37219679633867275,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.1391304347826087,
+        "recall_class_5": 0.6052631578947368,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6960234642028809,
+        "macro_f1": 0.5017139223298218,
+        "balanced_accuracy": 0.5236819304562629,
+        "accuracy": 0.7278350515463917,
+        "fpr": 0.10071942446043165,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3639923236450305,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.32231404958677684,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.7696629213483146,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7371776103973389,
+        "macro_f1": 0.4391121534539384,
+        "balanced_accuracy": 0.4819863967376192,
+        "accuracy": 0.654639175257732,
+        "fpr": 0.24803149606299213,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6207758053911899,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.06428571428571428,
+        "recall_class_5": 0.8690476190476191,
+        "recall_class_7": 0.9289940828402367,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "multikrum_backdoor": {
+    "macro_f1_mean": 0.3834517344035929,
+    "macro_f1_std": 0.10318635738175333,
+    "macro_f1_ci95": 0.12810224509007537,
+    "bal_acc_mean": 0.4286407098780057,
+    "bal_acc_std": 0.09089160355730234,
+    "rare_recall_mean": 0.32552805412566527,
+    "rare_recall_std": 0.22095757123845247,
+    "atypical_acc_mean": 0.7466666666666667,
+    "atypical_acc_std": 0.19804601036683933,
+    "asr_mean": 0.3994889032561394,
+    "asr_std": 0.27348329721219433,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.7087934017181396,
+        "macro_f1": 0.22176483186630308,
+        "balanced_accuracy": 0.2872697592550534,
+        "accuracy": 0.4587628865979381,
+        "fpr": 0.9647058823529412,
+        "backdoor_asr": 0.35524475524475524,
+        "atypical_acceptance_rate": 0.5,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.5862739086151123,
+        "macro_f1": 0.38826566456918266,
+        "balanced_accuracy": 0.41197427042083345,
+        "accuracy": 0.6608247422680412,
+        "fpr": 0.08394160583941605,
+        "backdoor_asr": 0.25,
+        "atypical_acceptance_rate": 0.8,
+        "rare_class_mean_recall": 0.3110031239153072,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.3283582089552239,
+        "recall_class_7": 0.6046511627906976,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7263646125793457,
+        "macro_f1": 0.4746939420161347,
+        "balanced_accuracy": 0.5148869202769031,
+        "accuracy": 0.6371134020618556,
+        "fpr": 0.0539568345323741,
+        "backdoor_asr": 0.8815028901734104,
+        "atypical_acceptance_rate": 0.8333333333333334,
+        "rare_class_mean_recall": 0.37204424103737604,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.17391304347826086,
+        "recall_class_5": 0.5701754385964912,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.569404125213623,
+        "macro_f1": 0.47078789232640555,
+        "balanced_accuracy": 0.5017265064703467,
+        "accuracy": 0.688659793814433,
+        "fpr": 0.21942446043165467,
+        "backdoor_asr": 0.2774566473988439,
+        "atypical_acceptance_rate": 0.6,
+        "rare_class_mean_recall": 0.3242021852849228,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.10743801652892562,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.8651685393258427,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7108285427093506,
+        "macro_f1": 0.3617463412399389,
+        "balanced_accuracy": 0.42734609296689186,
+        "accuracy": 0.5412371134020618,
+        "fpr": 0.7677165354330708,
+        "backdoor_asr": 0.23324022346368714,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6203907203907204,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.05714285714285714,
+        "recall_class_5": 0.8809523809523809,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "trimmed_mean_none": {
+    "macro_f1_mean": 0.43559210690124306,
+    "macro_f1_std": 0.07407119803008157,
+    "macro_f1_ci95": 0.09195679550020555,
+    "bal_acc_mean": 0.4716241795205581,
+    "bal_acc_std": 0.07641766618990095,
+    "rare_recall_mean": 0.36748836904554116,
+    "rare_recall_std": 0.2296413625317037,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.671567440032959,
+        "macro_f1": 0.3115300724928214,
+        "balanced_accuracy": 0.35292459981128665,
+        "accuracy": 0.5969072164948453,
+        "fpr": 0.4823529411764706,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7263050079345703,
+        "macro_f1": 0.4313737466681583,
+        "balanced_accuracy": 0.4482653697221525,
+        "accuracy": 0.688659793814433,
+        "fpr": 0.10948905109489052,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.4654865208839523,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.7313432835820896,
+        "recall_class_7": 0.6651162790697674,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7396626472473145,
+        "macro_f1": 0.4952939223321202,
+        "balanced_accuracy": 0.5544693823991088,
+        "accuracy": 0.6659793814432989,
+        "fpr": 0.0683453237410072,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.39185736079328753,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.1565217391304348,
+        "recall_class_5": 0.6271929824561403,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6674833297729492,
+        "macro_f1": 0.48750480475832536,
+        "balanced_accuracy": 0.5085446715872457,
+        "accuracy": 0.6876288659793814,
+        "fpr": 0.1618705035971223,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3565326399851425,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.6033057851239669,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.46629213483146065,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.5655014514923096,
+        "macro_f1": 0.45225798825479047,
+        "balanced_accuracy": 0.49391687408299667,
+        "accuracy": 0.6814432989690722,
+        "fpr": 0.07086614173228346,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6235653235653236,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.07857142857142857,
+        "recall_class_5": 0.8690476190476191,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "trimmed_mean_backdoor": {
+    "macro_f1_mean": 0.42651310047620844,
+    "macro_f1_std": 0.05896745440860934,
+    "macro_f1_ci95": 0.07320602731466598,
+    "bal_acc_mean": 0.4640691584928508,
+    "bal_acc_std": 0.0670641241577447,
+    "rare_recall_mean": 0.3565676553793722,
+    "rare_recall_std": 0.23401826545415863,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.9896410525890295,
+    "asr_std": 0.02236423824212068,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.7200815677642822,
+        "macro_f1": 0.3284329800938959,
+        "balanced_accuracy": 0.36055362519985623,
+        "accuracy": 0.5690721649484536,
+        "fpr": 0.6196078431372549,
+        "backdoor_asr": 0.9496503496503497,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.734447717666626,
+        "macro_f1": 0.4171806774111093,
+        "balanced_accuracy": 0.44514524731701655,
+        "accuracy": 0.6896907216494845,
+        "fpr": 0.09124087591240876,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.47013768367465003,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.7313432835820896,
+        "recall_class_7": 0.6790697674418604,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8278653621673584,
+        "macro_f1": 0.47254678863738636,
+        "balanced_accuracy": 0.5352418863294602,
+        "accuracy": 0.6402061855670103,
+        "fpr": 0.05755395683453238,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3458428680396644,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.14782608695652175,
+        "recall_class_5": 0.543859649122807,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7027742862701416,
+        "macro_f1": 0.44722615103628605,
+        "balanced_accuracy": 0.4733148439383322,
+        "accuracy": 0.668041237113402,
+        "fpr": 0.06474820143884892,
+        "backdoor_asr": 0.9985549132947977,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.33059398891881014,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.1322314049586777,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.8595505617977528,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6987059116363525,
+        "macro_f1": 0.4671789052023646,
+        "balanced_accuracy": 0.5060901896795885,
+        "accuracy": 0.6948453608247422,
+        "fpr": 0.06299212598425197,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6362637362637363,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.09285714285714286,
+        "recall_class_5": 0.8928571428571429,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "fltrust_none": {
+    "macro_f1_mean": 0.3579712261063195,
+    "macro_f1_std": 0.05105442375134147,
+    "macro_f1_ci95": 0.06338227717575604,
+    "bal_acc_mean": 0.4173800141578222,
+    "bal_acc_std": 0.054402853368042056,
+    "rare_recall_mean": 0.27861389544366044,
+    "rare_recall_std": 0.2328099644880376,
+    "atypical_acc_mean": 0.78,
+    "atypical_acc_std": 0.2280350850198276,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.5668678283691406,
+        "macro_f1": 0.31395416654389424,
+        "balanced_accuracy": 0.35928486259368614,
+        "accuracy": 0.6010309278350515,
+        "fpr": 0.07450980392156863,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 0.5,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 5,
+        "num_rejected": 5,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8927359580993652,
+        "macro_f1": 0.32035941669039203,
+        "balanced_accuracy": 0.3843730627101556,
+        "accuracy": 0.5938144329896907,
+        "fpr": 0.11678832116788321,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 0.6,
+        "rare_class_mean_recall": 0.21106097419877357,
+        "num_accepted": 6,
+        "num_rejected": 4,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.22388059701492538,
+        "recall_class_7": 0.40930232558139534,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7186093330383301,
+        "macro_f1": 0.4315386404771167,
+        "balanced_accuracy": 0.5023986978069114,
+        "accuracy": 0.5948453608247423,
+        "fpr": 0.07553956834532374,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.22772692601067887,
+        "num_accepted": 9,
+        "num_rejected": 1,
+        "recall_class_1": 0.0782608695652174,
+        "recall_class_5": 0.37719298245614036,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.4582967758178711,
+        "macro_f1": 0.39054498247031255,
+        "balanced_accuracy": 0.42840595123495606,
+        "accuracy": 0.6061855670103092,
+        "fpr": 0.11151079136690648,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 0.8,
+        "rare_class_mean_recall": 0.3140495867768595,
+        "num_accepted": 7,
+        "num_rejected": 3,
+        "recall_class_1": 0.9421487603305785,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.5350630283355713,
+        "macro_f1": 0.3334589243498818,
+        "balanced_accuracy": 0.412437496443402,
+        "accuracy": 0.5845360824742268,
+        "fpr": 0.3779527559055118,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6402319902319903,
+        "num_accepted": 7,
+        "num_rejected": 3,
+        "recall_class_1": 0.02142857142857143,
+        "recall_class_5": 0.9761904761904762,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "fltrust_backdoor": {
+    "macro_f1_mean": 0.30570576953594225,
+    "macro_f1_std": 0.07687752910015473,
+    "macro_f1_ci95": 0.09544075713684316,
+    "bal_acc_mean": 0.38122014442348934,
+    "bal_acc_std": 0.05576790047056533,
+    "rare_recall_mean": 0.36553195561280355,
+    "rare_recall_std": 0.28869948686952934,
+    "atypical_acc_mean": 0.7466666666666667,
+    "atypical_acc_std": 0.19804601036683933,
+    "asr_mean": 0.7724550632626972,
+    "asr_std": 0.2557902923564859,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.4588332176208496,
+        "macro_f1": 0.23617008703159956,
+        "balanced_accuracy": 0.31148979862215154,
+        "accuracy": 0.46804123711340206,
+        "fpr": 0.9176470588235294,
+        "backdoor_asr": 0.7706293706293706,
+        "atypical_acceptance_rate": 0.5,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 7,
+        "num_rejected": 3,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6994369029998779,
+        "macro_f1": 0.30893139115059726,
+        "balanced_accuracy": 0.36043008138638577,
+        "accuracy": 0.5731958762886598,
+        "fpr": 0.08394160583941605,
+        "backdoor_asr": 1.0,
+        "atypical_acceptance_rate": 0.6,
+        "rare_class_mean_recall": 0.19122989702649543,
+        "num_accepted": 7,
+        "num_rejected": 3,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.23880597014925373,
+        "recall_class_7": 0.33488372093023255,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6791455745697021,
+        "macro_f1": 0.27647998847300864,
+        "balanced_accuracy": 0.3934161598844264,
+        "accuracy": 0.3783505154639175,
+        "fpr": 0.8525179856115108,
+        "backdoor_asr": 0.9667630057803468,
+        "atypical_acceptance_rate": 0.8333333333333334,
+        "rare_class_mean_recall": 0.6628718535469107,
+        "num_accepted": 7,
+        "num_rejected": 3,
+        "recall_class_1": 0.3652173913043478,
+        "recall_class_5": 0.9605263157894737,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.9092068672180176,
+        "macro_f1": 0.4352578800555204,
+        "balanced_accuracy": 0.46470834337286837,
+        "accuracy": 0.6649484536082474,
+        "fpr": 0.08992805755395683,
+        "backdoor_asr": 0.7673410404624278,
+        "atypical_acceptance_rate": 0.8,
+        "rare_class_mean_recall": 0.32618318011576436,
+        "num_accepted": 9,
+        "num_rejected": 1,
+        "recall_class_1": 0.09090909090909091,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.8876404494382022,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.9686758518218994,
+        "macro_f1": 0.2716895009689853,
+        "balanced_accuracy": 0.3760563388516145,
+        "accuracy": 0.49896907216494846,
+        "fpr": 0.8976377952755905,
+        "backdoor_asr": 0.3575418994413408,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.6473748473748474,
+        "num_accepted": 8,
+        "num_rejected": 2,
+        "recall_class_1": 0.04285714285714286,
+        "recall_class_5": 0.9761904761904762,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "class_aware_trust_none": {
+    "macro_f1_mean": 0.4015967040226805,
+    "macro_f1_std": 0.11447528708268204,
+    "macro_f1_ci95": 0.14211705553640985,
+    "bal_acc_mean": 0.4478573372507809,
+    "bal_acc_std": 0.11178212080561195,
+    "rare_recall_mean": 0.3611105345730349,
+    "rare_recall_std": 0.22316759040304524,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.0,
+    "asr_std": 0.0,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.7600502967834473,
+        "macro_f1": 0.21796087510461848,
+        "balanced_accuracy": 0.2687200250155548,
+        "accuracy": 0.44432989690721647,
+        "fpr": 1.0,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.9490101337432861,
+        "macro_f1": 0.3622499863869065,
+        "balanced_accuracy": 0.41303101925912195,
+        "accuracy": 0.5989690721649484,
+        "fpr": 0.583941605839416,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.46895753789193567,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.4626865671641791,
+        "recall_class_7": 0.9441860465116279,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8223259449005127,
+        "macro_f1": 0.4954794883398435,
+        "balanced_accuracy": 0.5485714949533124,
+        "accuracy": 0.6587628865979381,
+        "fpr": 0.0683453237410072,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3982074752097636,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.20869565217391303,
+        "recall_class_5": 0.5877192982456141,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6792213916778564,
+        "macro_f1": 0.4667515907571623,
+        "balanced_accuracy": 0.49667637071845794,
+        "accuracy": 0.7061855670103093,
+        "fpr": 0.11510791366906475,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.3418299439749899,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.1322314049586777,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.8932584269662921,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.6109597682952881,
+        "macro_f1": 0.4655415795248714,
+        "balanced_accuracy": 0.5122877763074576,
+        "accuracy": 0.6989690721649484,
+        "fpr": 0.07480314960629922,
+        "backdoor_asr": 0.0,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.596557715788485,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.05714285714285714,
+        "recall_class_5": 0.7976190476190477,
+        "recall_class_7": 0.9349112426035503,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  },
+  "class_aware_trust_backdoor": {
+    "macro_f1_mean": 0.403784518963087,
+    "macro_f1_std": 0.07766471911091323,
+    "macro_f1_ci95": 0.09641802593719018,
+    "bal_acc_mean": 0.44637426652538653,
+    "bal_acc_std": 0.07434775562616883,
+    "rare_recall_mean": 0.36883106038210456,
+    "rare_recall_std": 0.24651554961466365,
+    "atypical_acc_mean": 1.0,
+    "atypical_acc_std": 0.0,
+    "asr_mean": 0.9636939429315461,
+    "asr_std": 0.03853887582005319,
+    "per_seed": [
+      {
+        "round": 5,
+        "duration_sec": 0.6338860988616943,
+        "macro_f1": 0.29294880714413407,
+        "balanced_accuracy": 0.34718250813839047,
+        "accuracy": 0.5824742268041238,
+        "fpr": 0.49411764705882355,
+        "backdoor_asr": 0.9020979020979021,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.0,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.0,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 42
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7588191032409668,
+        "macro_f1": 0.3538677761583919,
+        "balanced_accuracy": 0.40140220692809503,
+        "accuracy": 0.565979381443299,
+        "fpr": 0.7408759124087592,
+        "backdoor_asr": 0.992816091954023,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.558185815110494,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.0,
+        "recall_class_5": 0.7164179104477612,
+        "recall_class_7": 0.958139534883721,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 2,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 43
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.8003287315368652,
+        "macro_f1": 0.4794522473292792,
+        "balanced_accuracy": 0.5348250866877126,
+        "accuracy": 0.654639175257732,
+        "fpr": 0.07194244604316546,
+        "backdoor_asr": 0.9754335260115607,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.37885202135774215,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.12173913043478261,
+        "recall_class_5": 0.6359649122807017,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 44
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.994452714920044,
+        "macro_f1": 0.44464050811028,
+        "balanced_accuracy": 0.45333402717743754,
+        "accuracy": 0.6494845360824743,
+        "fpr": 0.12589928057553956,
+        "backdoor_asr": 0.9523121387283237,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.28513944346426473,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.49586776859504134,
+        "recall_class_5": 0.0,
+        "recall_class_7": 0.3595505617977528,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 45
+      },
+      {
+        "round": 5,
+        "duration_sec": 0.7165658473968506,
+        "macro_f1": 0.4480132560733498,
+        "balanced_accuracy": 0.4951275036952971,
+        "accuracy": 0.6731958762886598,
+        "fpr": 0.08267716535433071,
+        "backdoor_asr": 0.9958100558659218,
+        "atypical_acceptance_rate": 1.0,
+        "rare_class_mean_recall": 0.621978021978022,
+        "num_accepted": 10,
+        "num_rejected": 0,
+        "recall_class_1": 0.05,
+        "recall_class_5": 0.8928571428571429,
+        "recall_class_7": 0.9230769230769231,
+        "rare_per_class": {
+          "backdoor": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          },
+          "mitm": {
+            "numerator": 0,
+            "denominator": 1,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "numerator": 0,
+            "denominator": 0,
+            "recall": 0.0
+          }
+        },
+        "n_test_samples": 970,
+        "seed": 46
+      }
+    ]
+  }
+}

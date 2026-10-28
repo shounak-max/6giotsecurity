@@ -1,0 +1,78 @@
+{
+  "k_sweep": {
+    "1": {
+      "fedavg_recall_mean": 0.9135,
+      "fedavg_recall_std": 0.0525,
+      "multikrum_recall_mean": 0.0,
+      "multikrum_recall_std": 0.0,
+      "paired_diff_mean": -0.9135,
+      "paired_diff_ci": [
+        -0.9371,
+        -0.8898
+      ],
+      "holder_acc_mean": 0.0,
+      "binom_pvalue": 1.05e-14
+    },
+    "2": {
+      "fedavg_recall_mean": 0.8677,
+      "fedavg_recall_std": 0.0712,
+      "multikrum_recall_mean": 0.0,
+      "multikrum_recall_std": 0.0,
+      "paired_diff_mean": -0.8677,
+      "paired_diff_ci": [
+        -0.9008,
+        -0.8347
+      ],
+      "holder_acc_mean": 0.0,
+      "binom_pvalue": 1.1e-28
+    },
+    "3": {
+      "fedavg_recall_mean": 0.8151,
+      "fedavg_recall_std": 0.0911,
+      "multikrum_recall_mean": 0.4573,
+      "multikrum_recall_std": 0.1852,
+      "paired_diff_mean": -0.3578,
+      "paired_diff_ci": [
+        -0.4447,
+        -0.271
+      ],
+      "holder_acc_mean": 0.35,
+      "binom_pvalue": 4.65e-14
+    },
+    "5": {
+      "fedavg_recall_mean": 0.7408,
+      "fedavg_recall_std": 0.112,
+      "multikrum_recall_mean": 0.7693,
+      "multikrum_recall_std": 0.1141,
+      "paired_diff_mean": 0.0285,
+      "paired_diff_ci": [
+        -0.0235,
+        0.0806
+      ],
+      "holder_acc_mean": 0.712,
+      "binom_pvalue": 0.02
+    }
+  },
+  "arms_k1": {
+    "fedavg_mean": 0.9134999999999998,
+    "fedavg_std": 2.220446049250313e-16,
+    "placebo_mean": 0.9094318689384367,
+    "placebo_std": 0.07279592718069834,
+    "tost_pvalue": 0.006363013383753335,
+    "tost_ci": [
+      -0.036801171933180964,
+      0.02866490981005474
+    ],
+    "multikrum_natural_mean": 0.0,
+    "multikrum_forced_mean": 0.9117559900035918,
+    "mediation_ratio": 0.9980908483892633
+  },
+  "statistics": {},
+  "f0_arm": {
+    "fedavg_recall_mean": 0.9135,
+    "fedavg_recall_std": 0.0525,
+    "multikrum_f0_mean": 0.9135,
+    "multikrum_f0_std": 0.0525,
+    "paired_diff": 0.0
+  }
+}

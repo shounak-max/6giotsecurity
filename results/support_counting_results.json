@@ -1,0 +1,50 @@
+{
+  "1": {
+    "fedavg": {
+      "recall_mean": 0.04666666666666666,
+      "recall_std": 0.10434983894999018,
+      "holder_acc_mean": 1.0
+    },
+    "multikrum": {
+      "recall_mean": 0.0030303030303030303,
+      "recall_std": 0.00677596356818118,
+      "holder_acc_mean": 0.4
+    }
+  },
+  "2": {
+    "fedavg": {
+      "recall_mean": 0.12775300383996036,
+      "recall_std": 0.20831589498726596,
+      "holder_acc_mean": 1.0
+    },
+    "multikrum": {
+      "recall_mean": 0.1402420191893876,
+      "recall_std": 0.1520196520069452,
+      "holder_acc_mean": 0.7
+    }
+  },
+  "3": {
+    "fedavg": {
+      "recall_mean": 0.1596784696784697,
+      "recall_std": 0.24918688647522105,
+      "holder_acc_mean": 1.0
+    },
+    "multikrum": {
+      "recall_mean": 0.2762669503420838,
+      "recall_std": 0.25083340605192234,
+      "holder_acc_mean": 0.7999999999999999
+    }
+  },
+  "5": {
+    "fedavg": {
+      "recall_mean": 0.30523964001080706,
+      "recall_std": 0.23182242190314684,
+      "holder_acc_mean": 1.0
+    },
+    "multikrum": {
+      "recall_mean": 0.5357338403467312,
+      "recall_std": 0.11256678556120597,
+      "holder_acc_mean": 0.8400000000000001
+    }
+  }
+}

@@ -7,7 +7,8 @@ dist/
 build/
 *.json
 !configs/**/*.json
+!results/*.json
 *.parquet
 *.zip
 nftoniotv2/*.parquet
-results/
+# results/ (unignored so empirical benchmarks are stored)

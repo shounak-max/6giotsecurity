@@ -6,7 +6,7 @@ Combines:
 2. Residual Subspace Consistency Check (detects and purges atypical mimicry attacks).
 3. Two-Level Adaptive Clipping (Level 1: Client delta norm bound, Level 2: Server aggregate norm bound).
 4. Root Anchoring on clean server root set with magnitude normalization.
-5. Coordinate-wise Trigger Neutralization (suppresses backdoor trigger dimensions, achieving ASR <= 0.20).
+5. Coordinate-wise Trigger Neutralization (designed to suppress backdoor trigger dimensions toward the design target ASR <= 0.20).
 6. Configurable ablation flags for empirical ablation studies.
 """
 
