@@ -94,9 +94,17 @@ def load_nf_ton_iot_v2(
         df_features = cached_df.drop(columns=["_label"])
         # Reconstruct metadata
         unique_labels = np.unique(labels)
+        if binary:
+            cached_class_names = {0: "Benign", 1: "Attack"}
+        else:
+            ordered_classes = ["Benign"] + [a for a in sorted(list(KNOWN_CLASS_PROPORTIONS.keys())) if a != "Benign"]
+            cached_class_names = {idx: cls_name for idx, cls_name in enumerate(ordered_classes)}
+        KNOWN_RARE = {"backdoor", "mitm", "ransomware"}
+        rare_classes = [int(c) for c in unique_labels if int(c) != 0 and (cached_class_names.get(int(c), "").lower() in KNOWN_RARE or float(np.mean(labels == c)) < rare_threshold_ratio)]
         return df_features, labels, {
             "num_classes": len(unique_labels),
-            "rare_classes": [c for c in unique_labels if c in [7, 8, 9]],
+            "class_names": cached_class_names,
+            "rare_classes": rare_classes,
             "class_proportions": {c: float(np.mean(labels == c)) for c in unique_labels},
             "feature_names": list(df_features.columns),
         }
