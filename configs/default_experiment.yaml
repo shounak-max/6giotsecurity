@@ -1,0 +1,40 @@
+# Default Federated Intrusion Detection Configuration
+experiment:
+  name: "fl_ids_benchmark"
+  seed: 42
+  device: "cpu" # "cuda" or "cpu"
+
+dataset:
+  name: "synthetic_netflow" # NF-UNSW-NB15-v2, CSE-CIC-IDS2018, or synthetic
+  samples: 3000
+  features: 40
+  root_size: 100
+  alpha: 0.3 # Dirichlet concentration parameter (0.1, 0.3, 1.0)
+
+federation:
+  num_clients: 10
+  num_malicious: 2
+  num_rounds: 5
+  local_epochs: 1
+  batch_size: 32
+  learning_rate: 0.005
+
+threat_model:
+  attack_type: "backdoor" # none, sign_flip, label_flip, random_noise, backdoor, adaptive
+  trigger_features: [0, 1, 2]
+  trigger_magnitude: 5.0
+  target_class: 0
+  poison_rate: 0.5
+  boost_factor: 2.0
+
+defense:
+  name: "class_aware_trust" # fedavg, trimmed_mean, multikrum, foolsgold, fltrust, repguard, class_aware_trust
+  client_clip_norm: 5.0
+  server_clip_norm: 5.0
+  min_trust_threshold: 0.05
+  rare_class_boost: 1.25
+
+compression:
+  enabled: false
+  method: "topk" # topk or sign
+  ratio: 0.05
