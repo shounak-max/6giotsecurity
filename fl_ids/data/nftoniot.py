@@ -87,20 +87,23 @@ def load_nf_ton_iot_v2(
     # Disk cache check to avoid repeatedly streaming 13M rows
     cache_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "nftoniotv2", "cache")
     os.makedirs(cache_dir, exist_ok=True)
-    cache_file = os.path.join(cache_dir, f"sample_{n_samples}_{min_rare_samples}_{random_state}.parquet")
+    cache_file = os.path.join(cache_dir, f"sample_{n_samples}_{min_rare_samples}_{random_state}_{'bin' if binary else 'multi'}.parquet")
     if os.path.exists(cache_file):
         cached_df = pd.read_parquet(cache_file)
-        labels = cached_df["_label"].to_numpy()
+        labels = cached_df["_label"].to_numpy(dtype=np.int64)
+        if binary and len(np.unique(labels)) > 2:
+            labels = (labels > 0).astype(np.int64)
         df_features = cached_df.drop(columns=["_label"])
         # Reconstruct metadata
         unique_labels = np.unique(labels)
         if binary:
             cached_class_names = {0: "Benign", 1: "Attack"}
+            rare_classes = [1]
         else:
             ordered_classes = ["Benign"] + [a for a in sorted(list(KNOWN_CLASS_PROPORTIONS.keys())) if a != "Benign"]
             cached_class_names = {idx: cls_name for idx, cls_name in enumerate(ordered_classes)}
-        KNOWN_RARE = {"backdoor", "mitm", "ransomware"}
-        rare_classes = [int(c) for c in unique_labels if int(c) != 0 and (cached_class_names.get(int(c), "").lower() in KNOWN_RARE or float(np.mean(labels == c)) < rare_threshold_ratio)]
+            KNOWN_RARE = {"backdoor", "mitm", "ransomware"}
+            rare_classes = [int(c) for c in unique_labels if int(c) != 0 and (cached_class_names.get(int(c), "").lower() in KNOWN_RARE or float(np.mean(labels == c)) < rare_threshold_ratio)]
         return df_features, labels, {
             "num_classes": len(unique_labels),
             "class_names": cached_class_names,

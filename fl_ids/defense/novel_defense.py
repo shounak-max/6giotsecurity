@@ -50,6 +50,7 @@ class ClassAwareTrustDefense(BaseAggregator):
         coord_clip_val: float = 0.35,
         enable_coordinate_trim: bool = True,
         trim_fraction: float = 0.2,
+        enable_subspace_projection: bool = True,
     ):
         super().__init__(name="ClassAwareTrustDefense")
         self.client_clip_norm = client_clip_norm
@@ -64,6 +65,7 @@ class ClassAwareTrustDefense(BaseAggregator):
         self.coord_clip_val = coord_clip_val
         self.enable_coordinate_trim = enable_coordinate_trim
         self.trim_fraction = trim_fraction
+        self.enable_subspace_projection = enable_subspace_projection
 
     def aggregate(
         self,
@@ -99,6 +101,20 @@ class ClassAwareTrustDefense(BaseAggregator):
             g0 = np.mean(list(clipped_deltas.values()), axis=0)
             norm_g0 = np.linalg.norm(g0) + 1e-8
 
+        # 2b. Clean Root Subspace Projection Basis (neutralizes trigger dimensions)
+        Q = None
+        if self.enable_subspace_projection and (server_root_grad is not None or (class_conditional_grads is not None and self.enable_class_aware)):
+            vectors = []
+            if server_root_grad is not None:
+                vectors.append(g0 / norm_g0)
+            if class_conditional_grads is not None and self.enable_class_aware:
+                for cg in class_conditional_grads.values():
+                    norm_cg = np.linalg.norm(cg) + 1e-8
+                    vectors.append(cg / norm_cg)
+            if len(vectors) > 0:
+                V = np.stack(vectors, axis=-1)
+                Q, _ = np.linalg.qr(V)
+
         # 3. Class-Aware Trust Scoring & Residual Check
         trust_scores = {}
         processed_deltas = {}
@@ -106,6 +122,10 @@ class ClassAwareTrustDefense(BaseAggregator):
 
         for cid in client_ids:
             delta_i = clipped_deltas[cid]
+            if Q is not None:
+                # Project update onto verified clean root subspace
+                delta_i = Q @ (Q.T @ delta_i)
+
             norm_i = np.linalg.norm(delta_i) + 1e-8
 
             # Rescale magnitude to root anchor scale if root_norm is enabled
@@ -125,8 +145,6 @@ class ClassAwareTrustDefense(BaseAggregator):
 
             if self.enable_class_aware and class_conditional_grads is not None and len(class_conditional_grads) > 0:
                 for c_id, c_grad in class_conditional_grads.items():
-                    if c_id == 0:
-                        continue  # Majority class covered by base g0
                     norm_cg = np.linalg.norm(c_grad) + 1e-8
                     c_cos = float(np.dot(delta_i, c_grad) / (norm_i * norm_cg))
                     weighted_c_cos = c_cos * self.rare_class_boost

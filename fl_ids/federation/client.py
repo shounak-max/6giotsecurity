@@ -56,9 +56,12 @@ class FederatedClient:
             updated_weights: Dictionary of numpy weights (poisoned/compressed if configured).
             telemetry: Dict of local training metrics.
         """
+        if len(self.X_train) == 0:
+            return copy.deepcopy(global_weights), {"loss": 0.0, "samples": 0}
+
         # Instantiate model and load current global weights
         input_dim = self.X_train.shape[1]
-        num_classes = 10
+        num_classes = global_weights["classifier.bias"].shape[0] if "classifier.bias" in global_weights else 10
         model = EdgeIDSMLP(input_dim=input_dim, num_classes=num_classes).to(self.device)
         model.set_weights_dict(global_weights)
         model.train()

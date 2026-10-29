@@ -1,0 +1,431 @@
+{
+  "seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020
+  ],
+  "datasets": {
+    "NF-ToN-IoT-Multiclass": {
+      "backdoor_attack": {
+        "proposed": {
+          "asr_mean": 0.0036764434019050047,
+          "asr_std": 0.009011755188056365,
+          "accuracy_mean": 0.4929073033707866,
+          "rare_recall_mean": 0.07738954092862763,
+          "rare_test_samples_mean": 56.25
+        },
+        "fedavg": {
+          "asr_mean": 0.6806789593667759,
+          "asr_std": 0.4341991080888243,
+          "accuracy_mean": 0.582303370786517,
+          "rare_recall_mean": 0.1540113186756409
+        },
+        "multikrum": {
+          "asr_mean": 0.006485130897577511,
+          "asr_std": 0.019451408597034342,
+          "accuracy_mean": 0.542626404494382,
+          "rare_recall_mean": 0.0723764673435726
+        },
+        "trimmed_mean": {
+          "asr_mean": 0.5784461612699585,
+          "asr_std": 0.3360646453287831,
+          "accuracy_mean": 0.5915730337078651,
+          "rare_recall_mean": 0.10312534193532645
+        },
+        "foolsgold": {
+          "asr_mean": 0.8345954069412139,
+          "asr_std": 0.3278525703807103,
+          "accuracy_mean": 0.569311797752809,
+          "rare_recall_mean": 0.22012852400387733
+        },
+        "fltrust": {
+          "asr_mean": 0.3417119902380353,
+          "asr_std": 0.3254637330400931,
+          "accuracy_mean": 0.5577247191011235,
+          "rare_recall_mean": 0.23206821780780254
+        },
+        "repguard": {
+          "asr_mean": 0.4453951578420213,
+          "asr_std": 0.3920363671590734,
+          "accuracy_mean": 0.5820926966292135,
+          "rare_recall_mean": 0.14933268213840972
+        }
+      },
+      "ablations": {
+        "w_o_subspace_proj": {
+          "asr_mean": 0.3871998826696835,
+          "asr_std": 0.2913159277927706,
+          "accuracy_mean": 0.5767556179775282,
+          "rare_recall_mean": 0.08550569915120998
+        },
+        "w_o_class_aware": {
+          "asr_mean": 0.021113259637842174,
+          "asr_std": 0.036435713428516404,
+          "accuracy_mean": 0.40344101123595505,
+          "rare_recall_mean": 0.41466181880891123
+        },
+        "w_o_clipping": {
+          "asr_mean": 0.0038927902553583574,
+          "asr_std": 0.009413612828331842,
+          "accuracy_mean": 0.4940308988764045,
+          "rare_recall_mean": 0.07947300957556376
+        },
+        "w_o_root_norm": {
+          "asr_mean": 0.0019490213288875502,
+          "asr_std": 0.005693273953263202,
+          "accuracy_mean": 0.5154494382022472,
+          "rare_recall_mean": 0.04075784058562697
+        }
+      },
+      "seed_level_statistics": {
+        "proposed_vs_fedavg_asr": {
+          "mean_diff": -0.6770025159648709,
+          "95_ci": [
+            -0.8741908387039836,
+            -0.4798141932257583
+          ],
+          "t_stat": -6.729226725290003,
+          "p_val_ttest": 1.9764851425098267e-06,
+          "p_val_wilcoxon": 0.00038004167561065533
+        },
+        "proposed_vs_multikrum_asr": {
+          "mean_diff": -0.002808687495672505,
+          "95_ci": [
+            -0.008644022836628096,
+            0.0030266478452830865
+          ],
+          "t_stat": -0.9433952240723511,
+          "p_val_ttest": 0.3573212421924319,
+          "p_val_wilcoxon": 0.463071015014588
+        },
+        "proposed_vs_trimmed_mean_asr": {
+          "mean_diff": -0.5747697178680535,
+          "95_ci": [
+            -0.7258869212406293,
+            -0.4236525144954778
+          ],
+          "t_stat": -7.454800789582551,
+          "p_val_ttest": 4.7038824928162985e-07,
+          "p_val_wilcoxon": 1.9073486328125e-06
+        },
+        "proposed_vs_foolsgold_asr": {
+          "mean_diff": -0.8309189635393089,
+          "95_ci": [
+            -0.979382774937912,
+            -0.6824551521407058
+          ],
+          "t_stat": -10.969684485362535,
+          "p_val_ttest": 1.1616926670140664e-09,
+          "p_val_wilcoxon": 9.179208395541688e-05
+        },
+        "proposed_vs_fltrust_asr": {
+          "mean_diff": -0.33803554683613024,
+          "95_ci": [
+            -0.48541453829766223,
+            -0.19065655537459827
+          ],
+          "t_stat": -4.495550317100319,
+          "p_val_ttest": 0.0002476728774320531,
+          "p_val_wilcoxon": 0.00034155628132162525
+        },
+        "proposed_vs_repguard_asr": {
+          "mean_diff": -0.44171871444011623,
+          "95_ci": [
+            -0.6177888913611638,
+            -0.26564853751906864
+          ],
+          "t_stat": -4.917179589652204,
+          "p_val_ttest": 9.56775881769177e-05,
+          "p_val_wilcoxon": 0.0002332293340495912
+        }
+      }
+    },
+    "NF-ToN-IoT-Binary": {
+      "backdoor_attack": {
+        "proposed": {
+          "asr_mean": 0.32077051063444567,
+          "asr_std": 0.4228082148325236,
+          "accuracy_mean": 0.6910112359550562,
+          "rare_recall_mean": 0.7563455961346317,
+          "rare_test_samples_mean": 588.55
+        },
+        "fedavg": {
+          "asr_mean": 0.5155273164417616,
+          "asr_std": 0.46323834664754293,
+          "accuracy_mean": 0.8816713483146069,
+          "rare_recall_mean": 0.9922788293173882
+        },
+        "multikrum": {
+          "asr_mean": 0.5080591032028755,
+          "asr_std": 0.3769474944743658,
+          "accuracy_mean": 0.880056179775281,
+          "rare_recall_mean": 0.9209105079700137
+        },
+        "trimmed_mean": {
+          "asr_mean": 0.8059221156961358,
+          "asr_std": 0.31939359345400564,
+          "accuracy_mean": 0.8842696629213485,
+          "rare_recall_mean": 0.9338821175797145
+        },
+        "foolsgold": {
+          "asr_mean": 0.9225701593126212,
+          "asr_std": 0.13595010930945864,
+          "accuracy_mean": 0.9092696629213484,
+          "rare_recall_mean": 0.9611397349209296
+        },
+        "fltrust": {
+          "asr_mean": 0.6260798487755102,
+          "asr_std": 0.4591425371049467,
+          "accuracy_mean": 0.6649578651685394,
+          "rare_recall_mean": 0.6585990233450818
+        },
+        "repguard": {
+          "asr_mean": 0.6965390573345674,
+          "asr_std": 0.35931266422497415,
+          "accuracy_mean": 0.8742275280898875,
+          "rare_recall_mean": 0.9237428949807984
+        }
+      },
+      "ablations": {
+        "w_o_subspace_proj": {
+          "asr_mean": 0.7323445191212985,
+          "asr_std": 0.2991198469083434,
+          "accuracy_mean": 0.879564606741573,
+          "rare_recall_mean": 0.9053127190825423
+        },
+        "w_o_class_aware": {
+          "asr_mean": 0.7369449513284403,
+          "asr_std": 0.426735927317038,
+          "accuracy_mean": 0.39761235955056173,
+          "rare_recall_mean": 0.32647464469408444
+        },
+        "w_o_clipping": {
+          "asr_mean": 0.32368986017835516,
+          "asr_std": 0.42823091590838797,
+          "accuracy_mean": 0.6651685393258427,
+          "rare_recall_mean": 0.729864247835214
+        },
+        "w_o_root_norm": {
+          "asr_mean": 0.1638106014759871,
+          "asr_std": 0.25506660914451434,
+          "accuracy_mean": 0.8563202247191011,
+          "rare_recall_mean": 0.9161681608945559
+        }
+      },
+      "seed_level_statistics": {
+        "proposed_vs_fedavg_asr": {
+          "mean_diff": -0.19475680580731597,
+          "95_ci": [
+            -0.5063495863843879,
+            0.11683597476975599
+          ],
+          "t_stat": -1.225071192841455,
+          "p_val_ttest": 0.23551943747113363,
+          "p_val_wilcoxon": 0.40736876013625467
+        },
+        "proposed_vs_multikrum_asr": {
+          "mean_diff": -0.18728859256842978,
+          "95_ci": [
+            -0.38490641980952944,
+            0.010329234672669912
+          ],
+          "t_stat": -1.857553271174603,
+          "p_val_ttest": 0.07880122970407274,
+          "p_val_wilcoxon": 0.07070932047868624
+        },
+        "proposed_vs_trimmed_mean_asr": {
+          "mean_diff": -0.4851516050616903,
+          "95_ci": [
+            -0.7136703667081223,
+            -0.25663284341525827
+          ],
+          "t_stat": -4.161133812689553,
+          "p_val_ttest": 0.0005303225803195294,
+          "p_val_wilcoxon": 0.002225180116411056
+        },
+        "proposed_vs_foolsgold_asr": {
+          "mean_diff": -0.6017996486781754,
+          "95_ci": [
+            -0.8200601256082333,
+            -0.38353917174811747
+          ],
+          "t_stat": -5.404218519082619,
+          "p_val_ttest": 3.2492304417585635e-05,
+          "p_val_wilcoxon": 0.000209808349609375
+        },
+        "proposed_vs_fltrust_asr": {
+          "mean_diff": -0.3053093381410645,
+          "95_ci": [
+            -0.5410021480470147,
+            -0.06961652823511422
+          ],
+          "t_stat": -2.5389247257702574,
+          "p_val_ttest": 0.020023675505053413,
+          "p_val_wilcoxon": 0.0082523898739015
+        },
+        "proposed_vs_repguard_asr": {
+          "mean_diff": -0.3757685467001218,
+          "95_ci": [
+            -0.612467012905662,
+            -0.13907008049458164
+          ],
+          "t_stat": -3.111580583258549,
+          "p_val_ttest": 0.005744849724869216,
+          "p_val_wilcoxon": 0.012595170865161685
+        }
+      }
+    },
+    "Synthetic-NetFlow-Multiclass": {
+      "backdoor_attack": {
+        "proposed": {
+          "asr_mean": 0.0,
+          "asr_std": 0.0,
+          "accuracy_mean": 0.6808988764044944,
+          "rare_recall_mean": 0.0,
+          "rare_test_samples_mean": 0.3
+        },
+        "fedavg": {
+          "asr_mean": 0.2914325842696629,
+          "asr_std": 0.42401020125712163,
+          "accuracy_mean": 0.7997893258426967,
+          "rare_recall_mean": 0.0
+        },
+        "multikrum": {
+          "asr_mean": 0.0059691011235955055,
+          "asr_std": 0.025698313538241355,
+          "accuracy_mean": 0.7523876404494383,
+          "rare_recall_mean": 0.0
+        },
+        "trimmed_mean": {
+          "asr_mean": 0.11242977528089888,
+          "asr_std": 0.26650201329247175,
+          "accuracy_mean": 0.8064606741573034,
+          "rare_recall_mean": 0.0
+        },
+        "foolsgold": {
+          "asr_mean": 0.6252808988764047,
+          "asr_std": 0.43261039794140327,
+          "accuracy_mean": 0.8067415730337079,
+          "rare_recall_mean": 0.0
+        },
+        "fltrust": {
+          "asr_mean": 0.0007022471910112359,
+          "asr_std": 0.0030610245390032815,
+          "accuracy_mean": 0.671558988764045,
+          "rare_recall_mean": 0.0
+        },
+        "repguard": {
+          "asr_mean": 0.12542134831460675,
+          "asr_std": 0.24226575457577923,
+          "accuracy_mean": 0.8053370786516852,
+          "rare_recall_mean": 0.0
+        }
+      },
+      "ablations": {
+        "w_o_subspace_proj": {
+          "asr_mean": 0.05948033707865169,
+          "asr_std": 0.18273938689628294,
+          "accuracy_mean": 0.8471207865168541,
+          "rare_recall_mean": 0.0
+        },
+        "w_o_class_aware": {
+          "asr_mean": 0.006179775280898876,
+          "asr_std": 0.01870879303971541,
+          "accuracy_mean": 0.3764747191011236,
+          "rare_recall_mean": 0.14166666666666666
+        },
+        "w_o_clipping": {
+          "asr_mean": 0.0,
+          "asr_std": 0.0,
+          "accuracy_mean": 0.6808988764044944,
+          "rare_recall_mean": 0.0
+        },
+        "w_o_root_norm": {
+          "asr_mean": 0.0,
+          "asr_std": 0.0,
+          "accuracy_mean": 0.7034410112359551,
+          "rare_recall_mean": 0.0
+        }
+      },
+      "seed_level_statistics": {
+        "proposed_vs_fedavg_asr": {
+          "mean_diff": -0.2914325842696629,
+          "95_ci": [
+            -0.48209082279007687,
+            -0.1007743457492489
+          ],
+          "t_stat": -2.995977879588872,
+          "p_val_ttest": 0.007427567493647915,
+          "p_val_wilcoxon": 0.017960477526078766
+        },
+        "proposed_vs_multikrum_asr": {
+          "mean_diff": -0.0059691011235955055,
+          "95_ci": [
+            -0.017524472144433912,
+            0.005586269897242902
+          ],
+          "t_stat": -1.012467551335996,
+          "p_val_ttest": 0.324035212674493,
+          "p_val_wilcoxon": 0.17971249487899976
+        },
+        "proposed_vs_trimmed_mean_asr": {
+          "mean_diff": -0.11242977528089888,
+          "95_ci": [
+            -0.23226369499754912,
+            0.007404144435751367
+          ],
+          "t_stat": -1.8388980354778772,
+          "p_val_ttest": 0.08161318931322065,
+          "p_val_wilcoxon": 0.017960477526078766
+        },
+        "proposed_vs_foolsgold_asr": {
+          "mean_diff": -0.6252808988764047,
+          "95_ci": [
+            -0.8198062574469798,
+            -0.43075554030582963
+          ],
+          "t_stat": -6.300209755701931,
+          "p_val_ttest": 4.774928225641058e-06,
+          "p_val_wilcoxon": 0.0004358423668112835
+        },
+        "proposed_vs_fltrust_asr": {
+          "mean_diff": -0.0007022471910112359,
+          "95_ci": [
+            -0.0020786516853932586,
+            0.0006741573033707865
+          ],
+          "t_stat": -1.0000000000000002,
+          "p_val_ttest": 0.3298768009211248,
+          "p_val_wilcoxon": 0.31731050786291415
+        },
+        "proposed_vs_repguard_asr": {
+          "mean_diff": -0.12542134831460675,
+          "95_ci": [
+            -0.23435731703491403,
+            -0.016485379594299465
+          ],
+          "t_stat": -2.2566085892877696,
+          "p_val_ttest": 0.03600605352425739,
+          "p_val_wilcoxon": 0.0033456181158508813
+        }
+      }
+    }
+  }
+}
