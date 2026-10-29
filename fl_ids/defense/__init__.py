@@ -7,6 +7,8 @@ from fl_ids.defense.distance_filters import MultiKrum, FoolsGold
 from fl_ids.defense.trust_filters import FLTrust, RepGuard
 from fl_ids.defense.compression import SketchCompressor
 from fl_ids.defense.novel_defense import ClassAwareTrustDefense
+from fl_ids.defense.adaptive_catq import AdaptiveCATQDefense
+from fl_ids.defense.hybrid_catq import HybridCATQDefense
 
 __all__ = [
     "BaseAggregator",
@@ -19,4 +21,8 @@ __all__ = [
     "RepGuard",
     "SketchCompressor",
     "ClassAwareTrustDefense",
+    "AdaptiveCATQDefense",
+    "HybridCATQDefense",
 ]
+
+

@@ -5,6 +5,7 @@ from fl_ids.attacks.byzantine import SignFlipAttack, LabelFlipAttack, RandomNois
 from fl_ids.attacks.backdoor import AdditiveBackdoorAttack
 from fl_ids.attacks.adaptive import AdaptiveAttacker
 from fl_ids.attacks.mimicry import AtypicalMimicryAttack
+from fl_ids.attacks.subspace_aware import SubspaceAwareBackdoorAttack
 
 __all__ = [
     "BaseAttack",
@@ -14,4 +15,6 @@ __all__ = [
     "AdditiveBackdoorAttack",
     "AdaptiveAttacker",
     "AtypicalMimicryAttack",
+    "SubspaceAwareBackdoorAttack",
 ]
+
