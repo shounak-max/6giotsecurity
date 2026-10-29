@@ -60,27 +60,27 @@ All values report empirical **mean $\pm$ sample standard deviation** across 20 i
 
 | Dataset | Aggregator / Defense | Backdoor ASR $\downarrow$ | Test Accuracy $\uparrow$ | Rare Recall $\uparrow$ | Paired Diff ($\Delta_{\text{ASR}}$) | Wilcoxon $p$-val |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **NF-ToN-IoT-Multiclass** | **Proposed (Ours)** | **0.0037 $\pm$ 0.0090** | 49.29% | 7.74% | — | — |
-| (10 classes, 41 features) | `FedAvg` | 0.6807 $\pm$ 0.4342 | 58.23% | 15.40% | -0.6770 | $3.80 \times 10^{-4}$ |
-| (Rare test $N \approx 56.3$ total) | `MultiKrum` ($f=2$) | 0.0065 $\pm$ 0.0195 | 54.26% | 7.24% | -0.0028 | $0.4631$ |
-| | `TrimmedMean` | 0.5784 $\pm$ 0.3361 | 59.16% | 10.31% | -0.5748 | $1.91 \times 10^{-6}$ |
-| | `FoolsGold` | 0.8346 $\pm$ 0.3279 | 56.93% | 22.01% | -0.8309 | $9.18 \times 10^{-5}$ |
-| | `FLTrust` | 0.3417 $\pm$ 0.3255 | 55.77% | 23.21% | -0.3380 | $3.42 \times 10^{-4}$ |
-| | `RepGuard` | 0.4454 $\pm$ 0.3920 | 58.21% | 14.93% | -0.4417 | $2.33 \times 10^{-4}$ |
-| **NF-ToN-IoT-Binary** | **Proposed (Ours)** | **0.3208 $\pm$ 0.4228** | 69.10% | 75.63% | — | — |
-| (2 classes, 41 features) | `FedAvg` | 0.5155 $\pm$ 0.4632 | 88.17% | 99.23% | -0.1948 | $0.4074$ |
-| (Rare test $N = 588.5$) | `MultiKrum` ($f=2$) | 0.5081 $\pm$ 0.3769 | 88.01% | 92.09% | -0.1873 | $0.0707$ |
-| | `TrimmedMean` | 0.8059 $\pm$ 0.3194 | 88.43% | 93.39% | -0.4852 | $2.23 \times 10^{-3}$ |
-| | `FoolsGold` | 0.9226 $\pm$ 0.1360 | 90.93% | 96.11% | -0.6018 | $2.10 \times 10^{-4}$ |
-| | `FLTrust` | 0.6261 $\pm$ 0.4591 | 66.50% | 65.86% | -0.3053 | $8.25 \times 10^{-3}$ |
-| | `RepGuard` | 0.6965 $\pm$ 0.3593 | 87.42% | 92.37% | -0.3758 | $1.26 \times 10^{-2}$ |
-| **Synthetic-NetFlow** | **Proposed (Ours)** | **0.0000 $\pm$ 0.0000** | 68.09% | 0.00% | — | — |
-| (10 classes, 40 features) | `FedAvg` | 0.2914 $\pm$ 0.4240 | 79.98% | 0.00% | -0.2914 | $1.80 \times 10^{-2}$ |
-| | `MultiKrum` ($f=2$) | 0.0060 $\pm$ 0.0257 | 75.24% | 0.00% | -0.0060 | $0.1797$ |
-| | `TrimmedMean` | 0.1124 $\pm$ 0.2665 | 80.65% | 0.00% | -0.1124 | $1.80 \times 10^{-2}$ |
-| | `FoolsGold` | 0.6253 $\pm$ 0.4326 | 80.67% | 0.00% | -0.6253 | $4.36 \times 10^{-4}$ |
-| | `FLTrust` | 0.0007 $\pm$ 0.0031 | 67.16% | 0.00% | -0.0007 | $0.3173$ |
-| | `RepGuard` | 0.1254 $\pm$ 0.2423 | 80.53% | 0.00% | -0.1254 | $3.35 \times 10^{-3}$ |
+| **NF-ToN-IoT-Multiclass**<br>(10 classes, 41 features)<br>(Rare test $N \approx 56.3$ total) | **Proposed (Ours)** | **0.0037 $\pm$ 0.0090** | 49.29% | 7.74% | — | — |
+| | `FedAvg` | 0.6807 $\pm$ 0.4342 | 58.23% | 15.40% | -0.6770 | $3.80e-04$ |
+| | `MultiKrum` ($f=2$) | 0.0065 $\pm$ 0.0195 | 54.26% | 7.24% | -0.0028 | 0.4631 |
+| | `TrimmedMean` | 0.5784 $\pm$ 0.3361 | 59.16% | 10.31% | -0.5748 | $1.91e-06$ |
+| | `FoolsGold` | 0.8346 $\pm$ 0.3279 | 56.93% | 22.01% | -0.8309 | $9.18e-05$ |
+| | `FLTrust` | 0.3417 $\pm$ 0.3255 | 55.77% | 23.21% | -0.3380 | $3.42e-04$ |
+| | `RepGuard` | 0.4454 $\pm$ 0.3920 | 58.21% | 14.93% | -0.4417 | $2.33e-04$ |
+| **NF-ToN-IoT-Binary**<br>(2 classes, 41 features)<br>(Rare test $N = 588.5$) | **Proposed (Ours)** | **0.3208 $\pm$ 0.4228** | 69.10% | 75.63% | — | — |
+| | `FedAvg` | 0.5155 $\pm$ 0.4632 | 88.17% | 99.23% | -0.1948 | 0.4074 |
+| | `MultiKrum` ($f=2$) | 0.5081 $\pm$ 0.3769 | 88.01% | 92.09% | -0.1873 | 0.0707 |
+| | `TrimmedMean` | 0.8059 $\pm$ 0.3194 | 88.43% | 93.39% | -0.4852 | $2.23e-03$ |
+| | `FoolsGold` | 0.9226 $\pm$ 0.1360 | 90.93% | 96.11% | -0.6018 | $2.10e-04$ |
+| | `FLTrust` | 0.6261 $\pm$ 0.4591 | 66.50% | 65.86% | -0.3053 | $8.25e-03$ |
+| | `RepGuard` | 0.6965 $\pm$ 0.3593 | 87.42% | 92.37% | -0.3758 | 0.0126 |
+| **Synthetic-NetFlow-Multiclass**<br>(10 classes, 40 features) | **Proposed (Ours)** | **0.0000 $\pm$ 0.0000** | 68.09% | 0.00% | — | — |
+| | `FedAvg` | 0.2914 $\pm$ 0.4240 | 79.98% | 0.00% | -0.2914 | 0.0180 |
+| | `MultiKrum` ($f=2$) | 0.0060 $\pm$ 0.0257 | 75.24% | 0.00% | -0.0060 | 0.1797 |
+| | `TrimmedMean` | 0.1124 $\pm$ 0.2665 | 80.65% | 0.00% | -0.1124 | 0.0180 |
+| | `FoolsGold` | 0.6253 $\pm$ 0.4326 | 80.67% | 0.00% | -0.6253 | $4.36e-04$ |
+| | `FLTrust` | 0.0007 $\pm$ 0.0031 | 67.16% | 0.00% | -0.0007 | 0.3173 |
+| | `RepGuard` | 0.1254 $\pm$ 0.2423 | 80.53% | 0.00% | -0.1254 | $3.35e-03$ |
 
 ---
 
@@ -89,17 +89,20 @@ All values report empirical **mean $\pm$ sample standard deviation** across 20 i
 | Dataset | Ablation Variant | Backdoor ASR $\downarrow$ | Test Accuracy $\uparrow$ | Rare Recall $\uparrow$ | Causal Insight |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **NF-ToN-IoT-Multiclass** | **Full Proposed Defense** | **0.0037 $\pm$ 0.0090** | **49.29%** | **7.74%** | Full subspace projection + class-aware alignment |
-| | w/o Subspace Projection | 0.3872 $\pm$ 0.2913 | 57.68% | 15.68% | Backdoor ASR surges **105$\times$**; confirms projection neutralizes triggers |
-| | w/o Class-Aware Alignment | 0.0211 $\pm$ 0.0364 | 40.34% | 41.51% | Overall accuracy collapses to 40.34% without class anchors |
-| | w/o Adaptive Clipping | 0.0039 $\pm$ 0.0094 | 49.40% | 7.91% | Minor effect when subspace projection is active |
-| | w/o Root Norm | 0.0019 $\pm$ 0.0057 | 51.54% | 7.37% | Minor calibration adjustment |
-| **NF-ToN-IoT-Binary** | **Full Proposed Defense** | **0.3208 $\pm$ 0.4228** | **69.10%** | **75.63%** | Subspace rank $\le 2$ constrains separation |
-| | w/o Subspace Projection | 0.7323 $\pm$ 0.2991 | 87.96% | 90.53% | ASR more than doubles (0.32 $\to$ 0.73) |
+| | w/o Subspace Projection | 0.3872 $\pm$ 0.2913 | 57.68% | 8.55% | Backdoor ASR surges; confirms projection neutralizes triggers |
+| | w/o Class-Aware Alignment | 0.0211 $\pm$ 0.0364 | 40.34% | 41.47% | Overall accuracy collapses without class anchors |
+| | w/o Adaptive Clipping | 0.0039 $\pm$ 0.0094 | 49.40% | 7.95% | Minor effect when subspace projection is active |
+| | w/o Root Norm | 0.0019 $\pm$ 0.0057 | 51.54% | 4.08% | Minor calibration adjustment |
+| **NF-ToN-IoT-Binary** | **Full Proposed Defense** | **0.3208 $\pm$ 0.4228** | **69.10%** | **75.63%** | Subspace rank $\le 2$ constrains linear trigger separation |
+| | w/o Subspace Projection | 0.7323 $\pm$ 0.2991 | 87.96% | 90.53% | Backdoor ASR surges to > 0.73 without projection |
 | | w/o Class-Aware Alignment | 0.7369 $\pm$ 0.4267 | 39.76% | 32.65% | Severe collapse in binary utility |
-| | w/o Root Norm | 0.1643 $\pm$ 0.3211 | 85.62% | 88.35% | Root norm scaling is over-restrictive in binary setting |
-| **Synthetic-NetFlow** | **Full Proposed Defense** | **0.0000 $\pm$ 0.0000** | **68.09%** | **0.00%** | Complete trigger eradication |
+| | w/o Adaptive Clipping | 0.3237 $\pm$ 0.4282 | 66.52% | 72.99% | Moderate gradient bounding effect |
+| | w/o Root Norm | 0.1638 $\pm$ 0.2551 | 85.63% | 91.62% | Root norm scaling is over-restrictive in binary setting |
+| **Synthetic-NetFlow-Multiclass** | **Full Proposed Defense** | **0.0000 $\pm$ 0.0000** | **68.09%** | **0.00%** | Complete trigger eradication (ASR = 0.0000) |
 | | w/o Subspace Projection | 0.0595 $\pm$ 0.1827 | 84.71% | 0.00% | Backdoor activates without root projection |
-| | w/o Class-Aware Alignment | 0.0062 $\pm$ 0.0187 | 37.65% | 14.17% | Accuracy collapses to 37.65% |
+| | w/o Class-Aware Alignment | 0.0062 $\pm$ 0.0187 | 37.65% | 14.17% | Accuracy collapses without class anchors |
+| | w/o Adaptive Clipping | 0.0000 $\pm$ 0.0000 | 68.09% | 0.00% | Complete trigger suppression preserved |
+| | w/o Root Norm | 0.0000 $\pm$ 0.0000 | 70.34% | 0.00% | Complete trigger suppression preserved |
 
 ---
 
@@ -128,7 +131,7 @@ All values report empirical **mean $\pm$ sample standard deviation** across 20 i
 ## 🛠️ Repository Structure
 
 ```text
-winner/
+fl-ids/
 ├── fl_ids/
 │   ├── attacks/               # Poisoning and evasion attack modules
 │   │   ├── backdoor.py        # Additive & boosted NetFlow backdoor attacks
@@ -168,8 +171,9 @@ winner/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/shounak-max/6giotsecurity.git
-   cd 6giotsecurity
+   # Anonymous repository link for double-blind review
+   git clone https://anonymous.4open.science/r/fl-ids-6g.git
+   cd fl-ids-6g
    ```
 
 2. **Set up a virtual environment**:

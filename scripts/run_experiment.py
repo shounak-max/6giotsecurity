@@ -3,7 +3,7 @@ Unified CLI Experiment Runner for Federated Intrusion Detection (FL-IDS).
 
 Supports running baselines and novel defenses on synthetic NetFlow or real flow datasets:
 - Baselines: fedavg, trimmed_mean, multikrum, foolsgold, fltrust, repguard
-- Proposed: class_aware_trust (Winner)
+- Proposed: class_aware_trust (ClassAwareTrustDefense)
 - Attacks: none, sign_flip, label_flip, random_noise, backdoor, adaptive
 """
 
@@ -60,7 +60,7 @@ def get_defense(defense_name: str, num_malicious: int = 2):
         return FLTrust()
     elif name == "repguard":
         return RepGuard()
-    elif name in ["class_aware_trust", "proposed", "winner"]:
+    elif name in ["class_aware_trust", "proposed"]:
         return ClassAwareTrustDefense(client_clip_norm=5.0, min_trust_threshold=0.05)
     else:
         raise ValueError(f"Unknown defense: {defense_name}")

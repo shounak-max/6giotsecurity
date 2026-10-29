@@ -1,5 +1,5 @@
 """
-Novel Proposed Defense: Winner / FedEdge-IDS.
+Novel Proposed Defense: ClassAwareTrustDefense / FedEdge-IDS.
 
 Combines:
 1. Class-Aware Trust Scoring (prevents false-positive rejection of atypical clients holding rare classes).
