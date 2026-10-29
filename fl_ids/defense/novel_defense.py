@@ -27,7 +27,7 @@ class ClassAwareTrustDefense(BaseAggregator):
     """
     Proposed Class-Aware Robust Aggregator for 6G Edge FL-IDS.
 
-    Addresses the core research gaps identified in literature and Claude's review:
+    Addresses the core research gaps identified in Byzantine FL literature and theoretical analysis:
     1. Atypical Client Preservation: Decomposes alignment over class-conditional root anchors.
     2. Atypical Mimicry Mitigation: Checks orthogonal residual norm to ensure mimicry attacks
        cannot smuggle backdoor payloads under rare-class cover.

@@ -1,7 +1,7 @@
 """
 Rigorous Multi-Seed Benchmark, Ablation, and Mimicry Stress-Test Suite.
 
-Addresses all recommendations from Claude peer review:
+Implements systematic stress testing methodology:
 1. Multi-seed paired evaluation (n=5 seeds) with Mean +/- Std.
 2. Exact Backdoor ASR with denominators.
 3. Per-class minority recall for Worms (c=7), SQL Injection (c=8), Fingerprinting (c=9).

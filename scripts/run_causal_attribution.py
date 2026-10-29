@@ -1,7 +1,7 @@
 """
 Causal Attribution & Novelty Proof Benchmark on Real NF-ToN-IoT-V2 NetFlow Data.
 
-Implements the 4 Pillars of Novelty established during Claude peer review:
+Implements the 4 Pillars of Formal Causal Evaluation:
 1. Powered Sample Size: Real streaming NetFlow flows with robust rare-class floor
    (dozens of test instances per seed, eliminating single-digit denominator noise).
 2. Direct Causal Attribution via Do-Calculus Interventions:

@@ -1,7 +1,7 @@
 """
 Comprehensive Multi-Seed Real NetFlow Benchmark & Oracle Reference Evaluation.
 
-Implements all recommendations from Claude's peer review:
+Implements comprehensive empirical evaluation standards:
 1. Evaluated strictly on real NF-ToN-IoT-V2 traffic (13.1M flow source, 10 classes).
 2. Multi-seed paired evaluation (n=5 seeds: 42, 43, 44, 45, 46) with Mean +/- Std and 95% CI.
 3. Benign-Only Oracle Reference (oracle_clean) to isolate the aggregator-induced suppression penalty.

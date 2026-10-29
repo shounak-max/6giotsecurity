@@ -1,7 +1,7 @@
 """
 Stage A: Trigger-Agnostic Gini Attribution Detector Benchmark.
 
-Implements Claude's exact mathematical formulation:
+Implements theoretical mathematical formulation:
 1. Class-conditional margin attribution on clean server root data D_r:
    m_c(x) = z_c(x) - logsumexp_{c' != c} z_{c'}(x)
    g_{i,c,j} = mean_{x in D_r, y != c} | d m_c(x) / d x_j |

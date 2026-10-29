@@ -1,7 +1,7 @@
 """
 Placebo Control, Multi-Krum f-Sweep, and Natural-Prevalence Benchmark.
 
-Addresses Claude's direct review requests:
+Addresses key empirical validation controls:
 1. Placebo Arm: Forcibly exclude 2 typical honest clients from FedAvg.
    Tests specificity (does recall drop because of data volume, or specifically atypicality?).
 2. Defense Knob f-Sweep: Sweep Multi-Krum f in [0, 1, 2, 3, 4] on clean traffic.

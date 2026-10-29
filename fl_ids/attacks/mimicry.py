@@ -1,7 +1,7 @@
 """
 Atypical Rare-Class Mimicry Attack.
 
-Identified by Claude peer-review critique:
+Adaptive adversarial threat model:
 An adversary that attempts to bypass ClassAwareTrustDefense by intentionally
 crafting its update to mimic the class-conditional representation of legitimate
 rare-class clients (e.g., Worms, SQL Injection) while injecting backdoor/poisoning.

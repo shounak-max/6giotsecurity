@@ -1,18 +1,18 @@
 """
 Proposed Defense Benchmark Suite: 3 Datasets across 20 Fresh Seeds (3001-3020).
 
-Validates the Proposed Defense (ClassAwareTrustDefense):
-1. ASR <= 0.20 against backdoor attacks while preserving rare-class recall.
-2. Evaluated on 3 datasets:
-   - Dataset 1: NF-ToN-IoT-V2 Multiclass (10 classes, 41 features, >= 35 rare test samples/class)
-   - Dataset 2: NF-ToN-IoT-V2 Binary (2 classes, 41 features, >= 100 test samples/class)
-   - Dataset 3: Synthetic-NetFlow-V2 (10 classes, 40 features, >= 35 rare test samples/class)
-3. Baselines: FedAvg, MultiKrum, TrimmedMean, FoolsGold, FLTrust, RepGuard.
-4. Ablations of Proposed Defense:
+Evaluates the Proposed Defense (ClassAwareTrustDefense) with Q-Projection:
+1. Backdoor ASR and utility evaluation on 3 datasets:
+   - Dataset 1: NF-ToN-IoT-V2 Multiclass (10 classes, 41 features, ~56 rare test samples across classes)
+   - Dataset 2: NF-ToN-IoT-V2 Binary (2 classes, 41 features, ~588 attack test samples)
+   - Dataset 3: Synthetic-NetFlow-V2 (10 classes, 40 features)
+2. Baselines: FedAvg, MultiKrum (f=2), TrimmedMean, FoolsGold, FLTrust, RepGuard.
+3. 4-Arm Component Ablations:
+   - w/o Subspace Projection
    - w/o Class-Aware Alignment
    - w/o Adaptive Clipping
    - w/o Root Norm
-5. Statistics: Seed-level paired tests (t-test and Wilcoxon signed-rank test).
+4. Statistics: Seed-level paired tests (Student's t-test, Wilcoxon signed-rank test, ddof=1 sample std).
 """
 
 import os
@@ -45,11 +45,11 @@ from fl_ids.federation import FederatedClient, FederatedServer, FederatedSimulat
 SEEDS = list(range(3001, 3021))  # 20 fresh seeds
 NUM_ROUNDS = 3
 N_SAMPLES = 3000
-MIN_RARE_SAMPLES = 160  # Guarantees >= 35 test samples per rare class with 25% test split
+MIN_RARE_SAMPLES = 160  # Stratified floor ensuring rare class presence in train and test splits
 
 
 def load_dataset_for_benchmark(dataset_name: str, seed: int):
-    """Loads one of the 3 benchmark datasets with guaranteed test sample counts."""
+    """Loads one of the 3 benchmark datasets."""
     if dataset_name == "NF-ToN-IoT-Multiclass":
         df, labels, meta = load_nf_ton_iot_v2(n_samples=N_SAMPLES, min_rare_samples=MIN_RARE_SAMPLES, binary=False, random_state=seed)
         rare_classes = meta.get("rare_classes", [7, 8, 9])
@@ -96,7 +96,7 @@ def run_single_trial(
     X_clients_scaled = preproc.fit_transform(X_clients)
     X_root_scaled = preproc.transform(X_root)
 
-    # 25% test split (with >= 35 rare test samples)
+    # 25% test split
     n_test = int(len(X_clients_scaled) * 0.25)
     n_train = len(X_clients_scaled) - n_test
     X_train, y_train = X_clients_scaled[:n_train], y_clients[:n_train]
@@ -111,7 +111,7 @@ def run_single_trial(
     attack_obj = None
     X_trig_test = None
     target_class = 7 if num_classes > 2 else 0
-    malicious_ids = [0, 1] if attack_name != "none" else []
+    malicious_ids = [0, 1] if attack_name not in ["none", "clean_control"] else []
 
     if attack_name == "backdoor":
         attack_obj = AdditiveBackdoorAttack(
@@ -122,6 +122,17 @@ def run_single_trial(
             boost_factor=2.0,
         )
         X_trig_test = attack_obj.apply_trigger(X_test)
+    elif attack_name == "clean_control":
+        # Evaluates clean unpoisoned model on triggered test set to isolate false trigger baseline
+        attack_obj = None
+        eval_atk = AdditiveBackdoorAttack(
+            trigger_features=[0, 1, 2],
+            trigger_magnitude=4.0,
+            target_class=target_class,
+            poison_rate=0.5,
+            boost_factor=2.0,
+        )
+        X_trig_test = eval_atk.apply_trigger(X_test)
     elif attack_name == "label_flip":
         attack_obj = LabelFlipAttack(source_class=1, target_class=0)
     elif attack_name == "mimicry":
@@ -291,44 +302,68 @@ def main():
         # 1. Backdoor Attack: Proposed vs Baselines
         print(f"\n--- Backdoor Attack (20 Seeds) on {d_name} ---")
         
+        # Clean Control (FedAvg on clean clients evaluated on triggered test set)
+        clean_asrs = []
+        for s in SEEDS:
+            rc = run_single_trial("fedavg", "clean_control", d_name, s)
+            clean_asrs.append(rc["backdoor_asr"])
+        d_dict["clean_trigger_control"] = {
+            "clean_asr_mean": float(np.mean(clean_asrs)),
+            "clean_asr_std": float(np.std(clean_asrs, ddof=1)) if len(clean_asrs) > 1 else 0.0,
+        }
+        print(f"  Clean Control (Unpoisoned FedAvg on Triggered Test): ASR = {np.mean(clean_asrs):.4f}")
+
         # Proposed Defense
-        prop_asrs, prop_accs, prop_recalls = [], [], []
+        prop_asrs, prop_accs, prop_recalls, prop_atypicals = [], [], [], []
         rare_test_samples_list = []
         for s in SEEDS:
             r = run_single_trial("proposed", "backdoor", d_name, s)
             prop_asrs.append(r["backdoor_asr"])
             prop_accs.append(r["accuracy"])
             prop_recalls.append(r["rare_recall"])
+            prop_atypicals.append(r["atypical_acc_rate"])
             rare_test_samples_list.append(r["rare_test_samples"])
 
+        asr_m = float(np.mean(prop_asrs))
+        asr_s = float(np.std(prop_asrs, ddof=1))
         d_dict["backdoor_attack"]["proposed"] = {
-            "asr_mean": float(np.mean(prop_asrs)),
-            "asr_std": float(np.std(prop_asrs)),
+            "asr_mean": asr_m,
+            "asr_std": asr_s,
             "accuracy_mean": float(np.mean(prop_accs)),
+            "accuracy_std": float(np.std(prop_accs, ddof=1)),
             "rare_recall_mean": float(np.mean(prop_recalls)),
+            "rare_recall_std": float(np.std(prop_recalls, ddof=1)),
+            "atypical_acc_rate_mean": float(np.mean(prop_atypicals)),
+            "atypical_acc_rate_std": float(np.std(prop_atypicals, ddof=1)),
             "rare_test_samples_mean": float(np.mean(rare_test_samples_list)),
         }
-        print(f"  Proposed Defense: ASR = {np.mean(prop_asrs):.4f} +/- {np.std(prop_asrs):.4f} (<= 0.20 TARGET MET!) | Acc = {np.mean(prop_accs):.4f} | Rare Test N = {np.mean(rare_test_samples_list):.1f}")
+        status_tag = "<= 0.20 Target Met" if asr_m <= 0.20 else "> 0.20 Threshold Exceeded"
+        print(f"  Proposed Defense: ASR = {asr_m:.4f} +/- {asr_s:.4f} ({status_tag}) | Acc = {np.mean(prop_accs):.4f} | Rare Test N = {np.mean(rare_test_samples_list):.1f} | Atypical Acc Rate = {np.mean(prop_atypicals):.4f}")
 
         # Baseline Defenses
         for b_name in BASELINES:
-            b_asrs, b_accs, b_recalls = [], [], []
+            b_asrs, b_accs, b_recalls, b_atypicals = [], [], [], []
             for s in SEEDS:
                 rb = run_single_trial(b_name, "backdoor", d_name, s)
                 b_asrs.append(rb["backdoor_asr"])
                 b_accs.append(rb["accuracy"])
                 b_recalls.append(rb["rare_recall"])
+                b_atypicals.append(rb["atypical_acc_rate"])
 
             d_dict["backdoor_attack"][b_name] = {
                 "asr_mean": float(np.mean(b_asrs)),
-                "asr_std": float(np.std(b_asrs)),
+                "asr_std": float(np.std(b_asrs, ddof=1)),
                 "accuracy_mean": float(np.mean(b_accs)),
+                "accuracy_std": float(np.std(b_accs, ddof=1)),
                 "rare_recall_mean": float(np.mean(b_recalls)),
+                "rare_recall_std": float(np.std(b_recalls, ddof=1)),
+                "atypical_acc_rate_mean": float(np.mean(b_atypicals)),
+                "atypical_acc_rate_std": float(np.std(b_atypicals, ddof=1)),
             }
             # Seed-level statistical comparison on ASR
             asr_comp = compute_seed_level_comparison(prop_asrs, b_asrs)
             d_dict["seed_level_statistics"][f"proposed_vs_{b_name}_asr"] = asr_comp
-            print(f"  {b_name.upper():<12}: ASR = {np.mean(b_asrs):.4f} +/- {np.std(b_asrs):.4f} | Diff = {asr_comp['mean_diff']:+.4f} (p_wilc = {asr_comp['p_val_wilcoxon']:.4e})")
+            print(f"  {b_name.upper():<12}: ASR = {np.mean(b_asrs):.4f} +/- {np.std(b_asrs, ddof=1):.4f} | Diff = {asr_comp['mean_diff']:+.4f} (p_wilc = {asr_comp['p_val_wilcoxon']:.4e})")
 
         # 2. Ablations of Proposed Defense (Backdoor Attack)
         print(f"\n--- Proposed Defense Ablations on {d_name} ---")
@@ -339,18 +374,23 @@ def main():
             "w_o_root_norm": {"enable_root_norm": False},
         }
         for abl_name, abl_kw in ablations_to_test.items():
-            a_asrs, a_accs, a_recalls = [], [], []
+            a_asrs, a_accs, a_recalls, a_atypicals = [], [], [], []
             for s in SEEDS:
                 ra = run_single_trial("proposed", "backdoor", d_name, s, ablation_kwargs=abl_kw)
                 a_asrs.append(ra["backdoor_asr"])
                 a_accs.append(ra["accuracy"])
                 a_recalls.append(ra["rare_recall"])
+                a_atypicals.append(ra["atypical_acc_rate"])
 
             d_dict["ablations"][abl_name] = {
                 "asr_mean": float(np.mean(a_asrs)),
-                "asr_std": float(np.std(a_asrs)),
+                "asr_std": float(np.std(a_asrs, ddof=1)),
                 "accuracy_mean": float(np.mean(a_accs)),
+                "accuracy_std": float(np.std(a_accs, ddof=1)),
                 "rare_recall_mean": float(np.mean(a_recalls)),
+                "rare_recall_std": float(np.std(a_recalls, ddof=1)),
+                "atypical_acc_rate_mean": float(np.mean(a_atypicals)),
+                "atypical_acc_rate_std": float(np.std(a_atypicals, ddof=1)),
             }
             print(f"  Ablation ({abl_name}): ASR = {np.mean(a_asrs):.4f} | Acc = {np.mean(a_accs):.4f} | Rare Recall = {np.mean(a_recalls):.4f}")
 
